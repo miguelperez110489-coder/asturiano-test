@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test de Razonamiento Lógico–Numérico – Supervisores Asturiano</title>
+  <title>Test de Estilos de Liderazgo – Supervisores Asturiano</title>
   <style>
     :root{--brand-red:#E41D23;--brand-blue:#003C8F;--ink:#111827;--muted:#6b7280;--bg:#f4f6f9;--card:#ffffff;--line:#e5e7eb}
     *{box-sizing:border-box}
@@ -43,7 +43,7 @@
 </head>
 <body>
   <div class="hero">
-    <h1>Test de Razonamiento Lógico–Numérico</h1>
+    <h1>Test de Estilos de Liderazgo</h1>
     <p>Supervisores de UDN — Tiendas Asturiano. Envío cifrado; resultados solo visibles con PIN autorizado.</p>
   </div>
 
@@ -99,53 +99,31 @@
 
   <script>
   window.onload = () => {
-    // ---------- Preguntas (15) ----------
-    // Cada pregunta incluye 'topic' para el análisis por áreas y 'opts' con 'text' y 'isCorrect'
-    const baseQuestions=[
-      {topic:'corteZ', q:'Ventas del día $12,450; efectivo inicial $2,000; retiros $1,200; depósitos $0. ¿Efectivo final esperado?', 
-        opts:[{t:'13,250',ok:true},{t:'11,250',ok:false},{t:'10,450',ok:false},{t:'12,450',ok:false}]},
-      {topic:'inventario', q:'Cíclico indica 1,500 piezas de Corona Familiar; conteo físico: 1,300. ¿Diferencia a justificar?', 
-        opts:[{t:'200',ok:true},{t:'-200',ok:false},{t:'100',ok:false},{t:'300',ok:false}]},
-      {topic:'porcentajes', q:'Una promoción 3x2 equivale a un descuento efectivo de:', 
-        opts:[{t:'33.33%',ok:true},{t:'25%',ok:false},{t:'50%',ok:false},{t:'66.66%',ok:false}]},
-      {topic:'operaciones', q:'Si un producto cuesta $48 y se venden 75 unidades, el ingreso es:', 
-        opts:[{t:'3,600',ok:true},{t:'3,450',ok:false},{t:'3,750',ok:false},{t:'3,300',ok:false}]},
-      {topic:'proporciones', q:'Relación tickets/clientes: 240 tickets y 300 clientes. Ticket promedio por cliente:', 
-        opts:[{t:'0.80',ok:true},{t:'1.25',ok:false},{t:'1.20',ok:false},{t:'0.75',ok:false}]},
-      {topic:'estimaciones', q:'Recibo de refrescos: 42 cajas de 12 pzs. ¿Piezas totales?', 
-        opts:[{t:'504',ok:true},{t:'480',ok:false},{t:'492',ok:false},{t:'512',ok:false}]},
-      {topic:'sucesiones', q:'Completa la serie: 4, 7, 11, 16, 22, __', 
-        opts:[{t:'29',ok:true},{t:'28',ok:false},{t:'30',ok:false},{t:'27',ok:false}]},
-      {topic:'porcentajes', q:'Merma del 2% sobre 3,500 piezas equivale a:', 
-        opts:[{t:'70',ok:true},{t:'65',ok:false},{t:'75',ok:false},{t:'90',ok:false}]},
-      {topic:'cíclicos', q:'En cíclico, sistema 980 y físico 1,044. ¿Ajuste neto en piezas?', 
-        opts:[{t:'+64',ok:true},{t:'-64',ok:false},{t:'+34',ok:false},{t:'-34',ok:false}]},
-      {topic:'operaciones', q:'Se vendieron 125 tickets con ticket promedio $86. ¿Venta del día aprox.?', 
-        opts:[{t:'10,750',ok:true},{t:'10,625',ok:false},{t:'10,875',ok:false},{t:'9,875',ok:false}]},
-      {topic:'corteZ', q:'Corte Z: venta $18,920; efectivo inicial $1,500; retiros $4,000; depósitos $2,000. ¿Efectivo final?', 
-        opts:[{t:'14,420',ok:true},{t:'16,420',ok:false},{t:'12,920',ok:false},{t:'17,420',ok:false}]},
-      {topic:'inventario', q:'Existencias esperadas: 960; recepción: +180; ventas: -220. ¿Existencia final?', 
-        opts:[{t:'920',ok:true},{t:'940',ok:false},{t:'880',ok:false},{t:'1,020',ok:false}]},
-      {topic:'porcentajes', q:'Aumento de precio 8% sobre $125:', 
-        opts:[{t:'135.00',ok:true},{t:'134.50',ok:false},{t:'132.50',ok:false},{t:'135.80',ok:false}]},
-      {topic:'proporciones', q:'Si 5 cajas pesan 42.5 kg, ¿cuánto pesan 8 cajas (misma presentación)?', 
-        opts:[{t:'68.0 kg',ok:true},{t:'64.0 kg',ok:false},{t:'70.0 kg',ok:false},{t:'66.5 kg',ok:false}]},
-      {topic:'estimaciones', q:'Estimación rápida: 197×51 ≈', 
-        opts:[{t:'10,000',ok:true},{t:'9,000',ok:false},{t:'8,500',ok:false},{t:'10,500',ok:false}]}
+    const questions=[
+      {q:"Cuando visitas una UDN y notas incumplimiento de metas, ¿qué haces?",opts:["Das órdenes estrictas.","Reúnes al equipo para analizar causas.","Motivas con ejemplos positivos.","Dejas que lo resuelvan solos."],map:['A','D','T','L']},
+      {q:"Un empresario no realizó corte Z correctamente. ¿Cómo actúas?",opts:["Le ordenas corregir al instante.","Revisas con él para enseñarle.","Explicas la importancia del corte.","Le das libertad de hacerlo luego."],map:['A','D','T','L']},
+      {q:"Nuevo protocolo de cíclicos. ¿Cómo lo introduces?",opts:["Exiges cumplimiento inmediato.","Solicitas opiniones y sugerencias.","Compartes la visión de mejora.","Informas y cada quien decide."],map:['A','D','T','L']},
+      {q:"Dos empleados discuten en jornada. ¿Qué haces?",opts:["Impones orden de inmediato.","Escuchas a ambas partes.","Inspiras a pensar en objetivo común.","No te involucras."],map:['A','D','T','L']},
+      {q:"Se pide cíclico extra urgente. ¿Qué haces?",opts:["Das instrucción directa.","Preguntas quién puede apoyar.","Motivas con relevancia del cíclico.","Permites que lo hagan si quieren."],map:['A','D','T','L']},
+      {q:"Equipo desanimado. ¿Cómo respondes?",opts:["Recuerdas la obligación.","Dialogas y propones estrategias.","Inspiras visión positiva.","Les das espacio."],map:['A','D','T','L']},
+      {q:"Múltiples UDN que visitar en un día:",opts:["Das instrucciones rígidas.","Delegas y supervisas.","Confías en que se inspiren.","Cada quien que haga lo suyo."],map:['A','D','T','L']},
+      {q:"Error grave en caja:",opts:["Llamas la atención inmediata.","Analizas en conjunto.","Lo conviertes en aprendizaje.","No das importancia."],map:['A','D','T','L']},
+      {q:"Empresario quiere mejorar exhibición:",opts:["Le dices cómo hacerlo.","Escuchas sus ideas.","Lo motivas a innovar.","No intervienes."],map:['A','D','T','L']},
+      {q:"Decisión sobre promoción urgente:",opts:["La tomas tú mismo.","Preguntas opiniones antes de decidir.","Explicas la visión detrás.","Dejas que decida empresario."],map:['A','D','T','L']},
+      {q:"Registros de sistema no actualizados. ¿Qué haces?",opts:["Ordenas actualización inmediata.","Reorganizas con personal.","Motivas resaltando beneficios.","Dejas que lo hagan a su ritmo."],map:['A','D','T','L']},
+      {q:"UDN supera ventas:",opts:["Felicitas pero exiges mantener ritmo.","Reconoces públicamente.","Inspiras al resto.","No das reconocimiento especial."],map:['A','D','T','L']},
+      {q:"Incendio en la tienda. ¿Qué haces?",opts:["Das órdenes estrictas y evacuación inmediata.","Coordinas escuchando propuestas de acción.","Motivas manteniendo calma.","Esperas que el empresario actúe."],map:['A','D','T','L']},
+      {q:"Entrega de proveedor con faltantes:",opts:["Exiges reposición inmediata.","Dialogas y levantas acta.","Motivas a registrar evidencias.","Ignoras situación."],map:['A','D','T','L']},
+      {q:"Supervisor detecta merma sin causa:",opts:["Sancionas directo.","Investigación con equipo.","Lo conviertes en lección.","No actúas."],map:['A','D','T','L']},
+      {q:"Se debe implementar nueva política:",opts:["Ordenas cumplimiento ya.","Convocas reunión de consenso.","Presentas visión inspiradora.","No haces seguimiento."],map:['A','D','T','L']},
+      {q:"Conflicto entre empresarios de UDN distintas:",opts:["Decides solución unilateral.","Escuchas a ambos.","Los inspiras a colaborar.","No intervienes."],map:['A','D','T','L']},
+      {q:"Nueva estrategia comercial desde dirección:",opts:["Impones aplicación literal.","Pides sugerencias locales.","Motivas compartiendo visión.","Cada UDN libre de aplicarla."],map:['A','D','T','L']},
+      {q:"Un cajero reincide en error:",opts:["Sanción inmediata.","Capacitación y acompañamiento.","Motivación y confianza.","Dejas que aprenda solo."],map:['A','D','T','L']},
+      {q:"UDN enfrenta baja de ventas:",opts:["Exiges recuperar a la fuerza.","Analizas causas con equipo.","Motivas con campañas.","Dejas que el empresario busque solución."],map:['A','D','T','L']}
     ];
 
-    // ---------- Render con mezcla aleatoria de opciones ----------
+    // Render preguntas
     const quizArea=document.getElementById('quizArea');
-    const questions = baseQuestions.map(q => {
-      // copiar y barajar opciones
-      const shuffled = q.opts.map(o=>({text:o.t, ok:o.ok}));
-      for(let i=shuffled.length-1;i>0;i--){
-        const j=Math.floor(Math.random()*(i+1));
-        [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
-      }
-      return {topic:q.topic, q:q.q, opts:shuffled};
-    });
-
     questions.forEach((it,idx)=>{
       const div=document.createElement('div'); div.className='question';
       const qtitle=document.createElement('div'); qtitle.className='qtitle'; qtitle.textContent=`${idx+1}. ${it.q}`;
@@ -153,7 +131,7 @@
       const opts=document.createElement('div'); opts.className='options';
       it.opts.forEach((o,i)=>{
         const lbl=document.createElement('label');
-        lbl.innerHTML=`<input type='radio' name='q${idx}' value='${i}'> ${o.text}`;
+        lbl.innerHTML=`<input type='radio' name='q${idx}' value='${i}'> ${o}`;
         lbl.addEventListener('click',()=>{
           [...opts.querySelectorAll('label')].forEach(l=>l.classList.remove('selected'));
           lbl.classList.add('selected');
@@ -163,8 +141,8 @@
       div.appendChild(opts); quizArea.appendChild(div);
     });
 
-    // ---------- Storage + PIN ----------
-    const STORAGE_KEY='asturiano_matematicas_enc';
+    // Storage + PIN
+    const STORAGE_KEY='asturiano_liderazgo_full_enc';
     const DEFAULT_PIN='6483';
     const encodeRecord=(obj,pin)=> btoa(pin+'|'+JSON.stringify(obj));
     const decodeRecord=(enc,pin)=>{ try{const dec=atob(enc); if(!dec.startsWith(pin+'|')) return null; return JSON.parse(dec.slice(pin.length+1));}catch(e){return null} };
@@ -179,7 +157,7 @@
       if(!name||!udn){document.getElementById('msg').textContent='Completa nombre y UDN.'; return}
       const answers=[]; for(let i=0;i<questions.length;i++){ const sel=document.querySelector(`input[name=q${i}]:checked`); answers.push(sel?parseInt(sel.value):null); }
       if(answers.some(v=>v===null)){document.getElementById('msg').textContent='Responde todas las preguntas.'; return}
-      const record={name,udn,timestamp:new Date().toISOString(),answers,questions}; // guardamos snapshot con opciones barajadas
+      const record={name,udn,timestamp:new Date().toISOString(),answers};
       saveSubmission(encodeRecord(record,DEFAULT_PIN));
       document.getElementById('quizForm').reset();
       document.getElementById('msg').textContent='Respuestas guardadas. Usa el PIN en el panel derecho para ver resultados.';
@@ -187,7 +165,7 @@
 
     document.getElementById('clearForm').addEventListener('click',()=>{document.getElementById('quizForm').reset();document.getElementById('msg').textContent='Formulario limpio.'});
 
-    // ---------- Panel Admin ----------
+    // Admin
     document.getElementById('unlockBtn').addEventListener('click',()=>{
       const pin=document.getElementById('pinInput').value.trim();
       const arr=getAllSubmissions();
@@ -208,25 +186,25 @@
       const pin=document.getElementById('pinInput').value.trim();
       const arr=getAllSubmissions().map(enc=>decodeRecord(enc,pin)).filter(Boolean);
       const blob=new Blob([JSON.stringify(arr,null,2)],{type:'application/json'});
-      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`resultados_matematicas_${new Date().toISOString().slice(0,10)}.json`; a.click(); URL.revokeObjectURL(a.href);
+      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`resultados_liderazgo_${new Date().toISOString().slice(0,10)}.json`; a.click(); URL.revokeObjectURL(a.href);
     });
 
-    // ---------- Exportar Excel ----------
     document.getElementById('exportExcel').addEventListener('click',()=>{
       const pin=document.getElementById('pinInput').value.trim();
       const raw=getAllSubmissions().map(enc=>decodeRecord(enc,pin)).filter(Boolean);
       if(!raw.length){ alert('No hay registros para exportar.'); return; }
       const rows = raw.map((r,idx)=>{
-        const evals = r.answers.map((a,i)=> (a!==null && r.questions[i].opts[a].ok) ? 'OK':'ERR');
-        const score = evals.filter(x=>x==='OK').length;
-        const base={ "#": idx+1, "Nombre": r.name, "UDN": r.udn, "Fecha/Hora": new Date(r.timestamp).toLocaleString(), "Puntaje": score };
-        evals.forEach((v,i)=> base[`P${i+1}`]=v );
-        return base;
+        const counts={A:0,D:0,T:0,L:0};
+        r.answers.forEach((a,i)=>{ if(a!==null) counts[questions[i].map[a]]++; });
+        const best = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0][0];
+        const bestName = {A:'Autocrático',D:'Democrático',T:'Transformacional',L:'Laissez-faire'}[best];
+        return { "#": idx+1, "Nombre": r.name, "UDN": r.udn, "Fecha/Hora": new Date(r.timestamp).toLocaleString(),
+          Autocrático: counts.A, Democrático: counts.D, Transformacional: counts.T, LaissezFaire: counts.L, "Predominante": bestName };
       });
       const ws = XLSX.utils.json_to_sheet(rows);
       const wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, "Resultados");
-      XLSX.writeFile(wb, "resultados_test_matematicas.xlsx");
+      XLSX.writeFile(wb, "resultados_test_liderazgo.xlsx");
     });
 
     document.getElementById('clearAll').addEventListener('click',()=>{
@@ -264,62 +242,53 @@
       }));
     }
 
-    // ---------- Análisis ----------
+    // Análisis
     function showAnalysis(index,pin){
       const rec=decodeRecord(getAllSubmissions()[index],pin); if(!rec) return;
-      const total=rec.questions.length;
-      let correct=0;
-      const areaCounts={operaciones:0, porcentajes:0, proporciones:0, sucesiones:0, cíclicos:0, inventario:0, corteZ:0, estimaciones:0};
-      const areaErrors={operaciones:0, porcentajes:0, proporciones:0, sucesiones:0, cíclicos:0, inventario:0, corteZ:0, estimaciones:0};
+      const counts={A:0,D:0,T:0,L:0};
+      rec.answers.forEach((ans,i)=>{ if(ans!==null) counts[questions[i].map[ans]]++; });
+      const bestStyle = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0][0];
 
-      rec.answers.forEach((a,i)=>{
-        const q=rec.questions[i];
-        const ok = (a!==null && q.opts[a].ok);
-        if(ok) correct++;
-        const key = (q.topic in areaCounts)? q.topic : 'operaciones';
-        areaCounts[key]++;
-        if(!ok) areaErrors[key]++;
-      });
-      const incorrect = total - correct;
+      const styleInfo={
+        A:{name:'Autocrático',def:'Control directo, decisión unilateral y disciplina.',
+           bueno:['Alta claridad en crisis','Velocidad para decidir'],
+           malo:['Riesgo de desmotivación','Baja innovación local'],
+           rec:['Usar en incidentes críticos','Combinar con escucha y feedback']},
+        D:{name:'Democrático',def:'Participación del equipo y toma de decisiones compartida.',
+           bueno:['Compromiso del equipo','Mejor información para decidir'],
+           malo:['Ralentiza en urgencias','Riesgo de diluir responsabilidades'],
+           rec:['Definir tiempos de decisión','Cerrar con acuerdos claros']},
+        T:{name:'Transformacional',def:'Inspira, alinea con visión y promueve mejora continua.',
+           bueno:['Motiva y desarrolla','Fomenta innovación'],
+           malo:['Puede descuidar controles','Exceso de discurso sin ejecución'],
+           rec:['Aterrizar planes con KPIs','Revisiones semanales de avance']},
+        L:{name:'Laissez-faire',def:'Alta autonomía, mínima intervención directa.',
+           bueno:['Empodera a expertos','Favorece aprendizaje'],
+           malo:['Riesgo de descontrol','Falta de seguimiento'],
+           rec:['Definir métricas y cadencia','Escalamiento temprano de riesgos']}
+      };
 
-      const bueno=[]; const malo=[]; const recomendado=[];
-      // Fortalezas y áreas débiles
-      Object.keys(areaCounts).forEach(k=>{
-        if(areaCounts[k]===0) return;
-        const err = areaErrors[k];
-        if(err===0) bueno.push(`Domina ${k}.`);
-        if(err>0 && err/areaCounts[k]>=0.5){
-          if(k==='corteZ') { malo.push('Errores en arqueo y flujo de efectivo.'); recomendado.push('Repasar fórmula de efectivo final y retiros/deps.'); }
-          if(k==='cíclicos'){ malo.push('Errores en ajustes de cíclicos.'); recomendado.push('Practicar diferencias sistema vs físico con evidencia.'); }
-          if(k==='porcentajes'){ malo.push('Dificultad con porcentajes.'); recomendado.push('Ejercicios de descuentos y mermas.'); }
-          if(k==='proporciones'){ malo.push('Fallas en proporciones.'); recomendado.push('Reglas de tres y escalados.'); }
-          if(k==='inventario'){ malo.push('Errores en movimientos de inventario.'); recomendado.push('Secuencia entradas/salidas y existencia final.'); }
-          if(k==='estimaciones'){ malo.push('Estimaciones poco precisas.'); recomendado.push('Redondeo y cálculo mental.'); }
-          if(k==='sucesiones'){ malo.push('Patrones numéricos débiles.'); recomendado.push('Series aritméticas y reconocimiento de patrones.'); }
-          if(k==='operaciones'){ malo.push('Errores en operaciones básicas.'); recomendado.push('Multiplicaciones y sumas aplicadas a ventas.'); }
-        }
-      });
-
-      if(correct/total>=0.85){ bueno.push('Excelente criterio numérico aplicado a UDN.'); }
-      else if(correct/total>=0.65){ bueno.push('Base sólida; pulir áreas específicas.'); }
-      else { malo.push('Rendimiento bajo general.'); recomendado.push('Plan de refuerzo de 4 semanas por tema.'); }
-
+      const s=styleInfo[bestStyle];
       const area=document.getElementById('analysisArea'); area.innerHTML='';
       const summary=document.createElement('div');
       summary.className='analysis-summary';
-      summary.innerHTML = `<h3>Resumen</h3>
-        <p class='pill'>Aciertos: ${correct}/${total}</p>
-        <p class='pill'>Errores: ${incorrect}/${total}</p>
-        <p><strong>Lo bueno:</strong> ${bueno.join(' ')||'—'}</p>
-        <p><strong>Lo malo:</strong> ${malo.join(' ')||'—'}</p>
-        <p><strong>Recomendado:</strong> ${recomendado.join(' • ')||'—'}</p>`;
+      summary.innerHTML = `<h3>Estilo predominante: ${s.name}</h3>
+        <p><em>${s.def}</em></p>
+        <p class='pill'>Autocrático: ${counts.A}</p>
+        <p class='pill'>Democrático: ${counts.D}</p>
+        <p class='pill'>Transformacional: ${counts.T}</p>
+        <p class='pill'>Laissez-faire: ${counts.L}</p>
+        <p><strong>Lo bueno:</strong> ${s.bueno.join(' • ')}</p>
+        <p><strong>Lo malo:</strong> ${s.malo.join(' • ')}</p>
+        <p><strong>Recomendado:</strong> ${s.rec.join(' • ')}</p>`;
       area.appendChild(summary);
 
       const canvas=document.createElement('canvas'); area.appendChild(canvas);
       new Chart(canvas,{
-        type:'bar',
-        data:{labels:['Aciertos','Errores'],datasets:[{label:'Resultados',data:[correct,incorrect]}]},
-        options:{responsive:true,scales:{y:{beginAtZero:true}}}
+        type:'radar',
+        data:{labels:['Autocrático','Democrático','Transformacional','Laissez-faire'],
+              datasets:[{label:'Perfil de liderazgo', data:[counts.A,counts.D,counts.T,counts.L]}]},
+        options:{responsive:true, scales:{r:{beginAtZero:true, ticks:{stepSize:1}}}}
       });
     }
   }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test de Razonamiento Lógico–Numérico – Supervisores Asturiano</title>
+  <title>Test de Integridad y Ética – Supervisores Asturiano</title>
   <style>
     :root{--brand-red:#E41D23;--brand-blue:#003C8F;--ink:#111827;--muted:#6b7280;--bg:#f4f6f9;--card:#ffffff;--line:#e5e7eb}
     *{box-sizing:border-box}
@@ -43,7 +43,7 @@
 </head>
 <body>
   <div class="hero">
-    <h1>Test de Razonamiento Lógico–Numérico</h1>
+    <h1>Test de Integridad y Ética</h1>
     <p>Supervisores de UDN — Tiendas Asturiano. Envío cifrado; resultados solo visibles con PIN autorizado.</p>
   </div>
 
@@ -99,45 +99,114 @@
 
   <script>
   window.onload = () => {
-    // ---------- Preguntas (15) ----------
-    // Cada pregunta incluye 'topic' para el análisis por áreas y 'opts' con 'text' y 'isCorrect'
+    // ---------- Preguntas (20) ----------
     const baseQuestions=[
-      {topic:'corteZ', q:'Ventas del día $12,450; efectivo inicial $2,000; retiros $1,200; depósitos $0. ¿Efectivo final esperado?', 
-        opts:[{t:'13,250',ok:true},{t:'11,250',ok:false},{t:'10,450',ok:false},{t:'12,450',ok:false}]},
-      {topic:'inventario', q:'Cíclico indica 1,500 piezas de Corona Familiar; conteo físico: 1,300. ¿Diferencia a justificar?', 
-        opts:[{t:'200',ok:true},{t:'-200',ok:false},{t:'100',ok:false},{t:'300',ok:false}]},
-      {topic:'porcentajes', q:'Una promoción 3x2 equivale a un descuento efectivo de:', 
-        opts:[{t:'33.33%',ok:true},{t:'25%',ok:false},{t:'50%',ok:false},{t:'66.66%',ok:false}]},
-      {topic:'operaciones', q:'Si un producto cuesta $48 y se venden 75 unidades, el ingreso es:', 
-        opts:[{t:'3,600',ok:true},{t:'3,450',ok:false},{t:'3,750',ok:false},{t:'3,300',ok:false}]},
-      {topic:'proporciones', q:'Relación tickets/clientes: 240 tickets y 300 clientes. Ticket promedio por cliente:', 
-        opts:[{t:'0.80',ok:true},{t:'1.25',ok:false},{t:'1.20',ok:false},{t:'0.75',ok:false}]},
-      {topic:'estimaciones', q:'Recibo de refrescos: 42 cajas de 12 pzs. ¿Piezas totales?', 
-        opts:[{t:'504',ok:true},{t:'480',ok:false},{t:'492',ok:false},{t:'512',ok:false}]},
-      {topic:'sucesiones', q:'Completa la serie: 4, 7, 11, 16, 22, __', 
-        opts:[{t:'29',ok:true},{t:'28',ok:false},{t:'30',ok:false},{t:'27',ok:false}]},
-      {topic:'porcentajes', q:'Merma del 2% sobre 3,500 piezas equivale a:', 
-        opts:[{t:'70',ok:true},{t:'65',ok:false},{t:'75',ok:false},{t:'90',ok:false}]},
-      {topic:'cíclicos', q:'En cíclico, sistema 980 y físico 1,044. ¿Ajuste neto en piezas?', 
-        opts:[{t:'+64',ok:true},{t:'-64',ok:false},{t:'+34',ok:false},{t:'-34',ok:false}]},
-      {topic:'operaciones', q:'Se vendieron 125 tickets con ticket promedio $86. ¿Venta del día aprox.?', 
-        opts:[{t:'10,750',ok:true},{t:'10,625',ok:false},{t:'10,875',ok:false},{t:'9,875',ok:false}]},
-      {topic:'corteZ', q:'Corte Z: venta $18,920; efectivo inicial $1,500; retiros $4,000; depósitos $2,000. ¿Efectivo final?', 
-        opts:[{t:'14,420',ok:true},{t:'16,420',ok:false},{t:'12,920',ok:false},{t:'17,420',ok:false}]},
-      {topic:'inventario', q:'Existencias esperadas: 960; recepción: +180; ventas: -220. ¿Existencia final?', 
-        opts:[{t:'920',ok:true},{t:'940',ok:false},{t:'880',ok:false},{t:'1,020',ok:false}]},
-      {topic:'porcentajes', q:'Aumento de precio 8% sobre $125:', 
-        opts:[{t:'135.00',ok:true},{t:'134.50',ok:false},{t:'132.50',ok:false},{t:'135.80',ok:false}]},
-      {topic:'proporciones', q:'Si 5 cajas pesan 42.5 kg, ¿cuánto pesan 8 cajas (misma presentación)?', 
-        opts:[{t:'68.0 kg',ok:true},{t:'64.0 kg',ok:false},{t:'70.0 kg',ok:false},{t:'66.5 kg',ok:false}]},
-      {topic:'estimaciones', q:'Estimación rápida: 197×51 ≈', 
-        opts:[{t:'10,000',ok:true},{t:'9,000',ok:false},{t:'8,500',ok:false},{t:'10,500',ok:false}]}
+      {topic:'caja', q:'Encuentras un retiro en caja sin comprobante durante el corte Z. ¿Qué haces?',
+        opts:[{t:'Solicitar comprobante y registrar incidencia si no existe.',ok:true},
+              {t:'Ignorar, es responsabilidad del empresario.',ok:false},
+              {t:'Ajustar el corte para que cuadre.',ok:false},
+              {t:'Esperar al siguiente turno para ver si aparece.',ok:false}]},
+      {topic:'proveedor', q:'Un proveedor ofrece “regalos” para acelerar descarga.',
+        opts:[{t:'Rechazar y reportar el intento por posible conflicto de interés.',ok:true},
+              {t:'Aceptar, pero compartir con el equipo.',ok:false},
+              {t:'Aceptar si no afecta el precio.',ok:false},
+              {t:'Ignorar y continuar sin reportar.',ok:false}]},
+      {topic:'cíclicos', q:'Faltantes recurrentes en cíclico de alto valor.',
+        opts:[{t:'Solicitar investigación y levantar incidencia con evidencia.',ok:true},
+              {t:'Justificar sin evidencia para evitar problemas.',ok:false},
+              {t:'Ajustar manualmente el sistema.',ok:false},
+              {t:'Dejar pasar porque “es común”.',ok:false}]},
+      {topic:'tickets', q:'Detectas omisión de tickets manuales para quedarse con efectivo.',
+        opts:[{t:'Asegurar evidencias y escalar según protocolo disciplinario.',ok:true},
+              {t:'Pedir que lo deje de hacer sin registrar.',ok:false},
+              {t:'Cubrir la diferencia para evitar reporte.',ok:false},
+              {t:'Cambiar al cajero de turno sin registrar.',ok:false}]},
+      {topic:'inventario', q:'Te piden ajustar inventario sin evidencia para “cuadrar”.',
+        opts:[{t:'Negarte y solicitar soporte documental (recepción/fotos).',ok:true},
+              {t:'Hacerlo y documentarlo después.',ok:false},
+              {t:'Hacerlo si lo solicita el empresario.',ok:false},
+              {t:'Hacerlo solo esta vez.',ok:false}]},
+      {topic:'promociones', q:'Piden extender una promoción vencida para “cumplir venta”.',
+        opts:[{t:'Negarse; comunicar fechas vigentes y alternativas autorizadas.',ok:true},
+              {t:'Aplicarla si el cliente lo pide.',ok:false},
+              {t:'Aplicarla solo en horas de baja afluencia.',ok:false},
+              {t:'Aplicarla si se repone la diferencia en caja.',ok:false}]},
+      {topic:'datos', q:'Solicitan acceso a datos de ventas de otra UDN sin autorización.',
+        opts:[{t:'Negarse y remitir a canal formal de solicitud.',ok:true},
+              {t:'Compartir por confianza entre supervisores.',ok:false},
+              {t:'Enviar por WhatsApp temporalmente.',ok:false},
+              {t:'Solo pasar el resumen sin nombre de UDN.',ok:false}]},
+      {topic:'mermas', q:'Merma “no identificada” sin evidencias.',
+        opts:[{t:'Pedir evidencias y revisar cámaras/recepciones antes de ajustar.',ok:true},
+              {t:'Ajustar para limpiar el reporte.',ok:false},
+              {t:'Aceptar la merma si es pequeña.',ok:false},
+              {t:'Cerrar el mes sin aclarar.',ok:false}]},
+      {topic:'conflicto', q:'Un familiar tuyo es empresario de una UDN.',
+        opts:[{t:'Declarar conflicto de interés y solicitar reasignación.',ok:true},
+              {t:'Supervisarlo con “más cuidado”.',ok:false},
+              {t:'Aprovechar para impulsar sus ventas.',ok:false},
+              {t:'Solo evitar sancionarlo.',ok:false}]},
+      {topic:'seguridad', q:'Se detecta riesgo de incendio por sobrecarga eléctrica.',
+        opts:[{t:'Detener operación afectada y activar protocolo de seguridad.',ok:true},
+              {t:'Seguir operando hasta el cierre.',ok:false},
+              {t:'Avisar al final del día.',ok:false},
+              {t:'Colocar un letrero y continuar.',ok:false}]},
+      {topic:'depósitos', q:'Depósito bancario incompleto respecto al corte Z.',
+        opts:[{t:'Solicitar aclaración inmediata y evidencia de depósito.',ok:true},
+              {t:'Cubrir la diferencia temporalmente.',ok:false},
+              {t:'Esperar al cierre semanal.',ok:false},
+              {t:'Registrar como merma de caja sin revisión.',ok:false}]},
+      {topic:'evidencias', q:'Te piden “agilizar” auditoría quitando fotos de evidencia.',
+        opts:[{t:'Negarse; evidencias son obligatorias.',ok:true},
+              {t:'Eliminar fotos de faltantes menores.',ok:false},
+              {t:'Enviar solo texto de resumen.',ok:false},
+              {t:'Mandar fotos antiguas.',ok:false}]},
+      {topic:'informes', q:'Reportas una irregularidad. Dirección te pide “suavizar” el lenguaje.',
+        opts:[{t:'Mantener hechos objetivos y adjuntar evidencia.',ok:true},
+              {t:'Cambiarlo por términos ambiguos.',ok:false},
+              {t:'Retirar montos precisos.',ok:false},
+              {t:'Bajar el nivel a “observación menor”.',ok:false}]},
+      {topic:'sanciones', q:'Cajero reincidente tras capacitación y advertencia.',
+        opts:[{t:'Aplicar protocolo disciplinario y documentar.',ok:true},
+              {t:'Solo cambiarlo de turno.',ok:false},
+              {t:'Pedirle que “ya no lo haga”.',ok:false},
+              {t:'Ignorar para no afectar clima.',ok:false}]},
+      {topic:'auditoría', q:'Auditor solicita acceso a información sensible.',
+        opts:[{t:'Verificar credenciales y otorgar lo autorizado.',ok:true},
+              {t:'Dar acceso completo por ser auditor.',ok:false},
+              {t:'Mandar todo por correo personal.',ok:false},
+              {t:'Compartir vía USB sin registro.',ok:false}]},
+      {topic:'corteZ', q:'Diferencia en efectivo por error del empresario.',
+        opts:[{t:'Registrar incidencia, pedir reposición y reforzar proceso.',ok:true},
+              {t:'Cubrir con caja chica.',ok:false},
+              {t:'Mover a otras cuentas para “compensar”.',ok:false},
+              {t:'Cerrar sin aclarar y ver después.',ok:false}]},
+      {topic:'proveedor2', q:'Proveedor pide firmar recepción completa con faltantes.',
+        opts:[{t:'Negarse y firmar solo lo efectivamente recibido.',ok:true},
+              {t:'Firmar y pedir reposición después.',ok:false},
+              {t:'Firmar si el proveedor es de confianza.',ok:false},
+              {t:'Firmar para evitar demoras y ajustar luego.',ok:false}]},
+      {topic:'privacidad', q:'Grupo de WhatsApp pide fotos de cámaras de seguridad.',
+        opts:[{t:'Negarse y usar canal formal con autorización.',ok:true},
+              {t:'Enviar video si no se ve gente.',ok:false},
+              {t:'Enviar foto borrosa nada más.',ok:false},
+              {t:'Compartir en horario nocturno.',ok:false}]},
+      {topic:'transparencia', q:'Se solicita cambiar fecha de reporte para “mejorar indicadores”.',
+        opts:[{t:'Negarse; la fecha debe reflejar el evento real.',ok:true},
+              {t:'Cambiar si dirección lo pide.',ok:false},
+              {t:'Cambiar si mejora el bono.',ok:false},
+              {t:'Cambiar si no afecta a nadie.',ok:false}]},
+      {topic:'denuncia', q:'Observas posible robo interno con evidencias parciales.',
+        opts:[{t:'Asegurar evidencias, notificar y seguir protocolo de investigación.',ok:true},
+              {t:'Enfrentar al sospechoso sin registro.',ok:false},
+              {t:'Publicarlo en el grupo general.',ok:false},
+              {t:'Ignorar hasta tener video claro.',ok:false}]}
     ];
 
-    // ---------- Render con mezcla aleatoria de opciones ----------
+    // ---------- Render con mezcla aleatoria y snapshot ----------
     const quizArea=document.getElementById('quizArea');
+    // Mezclar opciones en cada carga y guardar snapshot de preguntas
     const questions = baseQuestions.map(q => {
-      // copiar y barajar opciones
       const shuffled = q.opts.map(o=>({text:o.t, ok:o.ok}));
       for(let i=shuffled.length-1;i>0;i--){
         const j=Math.floor(Math.random()*(i+1));
@@ -146,6 +215,7 @@
       return {topic:q.topic, q:q.q, opts:shuffled};
     });
 
+    // Pintar preguntas
     questions.forEach((it,idx)=>{
       const div=document.createElement('div'); div.className='question';
       const qtitle=document.createElement('div'); qtitle.className='qtitle'; qtitle.textContent=`${idx+1}. ${it.q}`;
@@ -163,8 +233,8 @@
       div.appendChild(opts); quizArea.appendChild(div);
     });
 
-    // ---------- Storage + PIN ----------
-    const STORAGE_KEY='asturiano_matematicas_enc';
+    // ---------- Storage + PIN (idéntico a los otros) ----------
+    const STORAGE_KEY='asturiano_integridad_enc_v2';
     const DEFAULT_PIN='6483';
     const encodeRecord=(obj,pin)=> btoa(pin+'|'+JSON.stringify(obj));
     const decodeRecord=(enc,pin)=>{ try{const dec=atob(enc); if(!dec.startsWith(pin+'|')) return null; return JSON.parse(dec.slice(pin.length+1));}catch(e){return null} };
@@ -172,6 +242,7 @@
     const getAllSubmissions=()=> JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
     const deleteSubmission=(index)=>{ const arr=getAllSubmissions(); arr.splice(index,1); localStorage.setItem(STORAGE_KEY,JSON.stringify(arr)); };
 
+    // Envío
     document.getElementById('quizForm').addEventListener('submit',e=>{
       e.preventDefault();
       const name=document.getElementById('participantName').value.trim();
@@ -179,7 +250,7 @@
       if(!name||!udn){document.getElementById('msg').textContent='Completa nombre y UDN.'; return}
       const answers=[]; for(let i=0;i<questions.length;i++){ const sel=document.querySelector(`input[name=q${i}]:checked`); answers.push(sel?parseInt(sel.value):null); }
       if(answers.some(v=>v===null)){document.getElementById('msg').textContent='Responde todas las preguntas.'; return}
-      const record={name,udn,timestamp:new Date().toISOString(),answers,questions}; // guardamos snapshot con opciones barajadas
+      const record={name,udn,timestamp:new Date().toISOString(),answers,questions}; // snapshot incluido
       saveSubmission(encodeRecord(record,DEFAULT_PIN));
       document.getElementById('quizForm').reset();
       document.getElementById('msg').textContent='Respuestas guardadas. Usa el PIN en el panel derecho para ver resultados.';
@@ -187,7 +258,7 @@
 
     document.getElementById('clearForm').addEventListener('click',()=>{document.getElementById('quizForm').reset();document.getElementById('msg').textContent='Formulario limpio.'});
 
-    // ---------- Panel Admin ----------
+    // ---------- Admin ----------
     document.getElementById('unlockBtn').addEventListener('click',()=>{
       const pin=document.getElementById('pinInput').value.trim();
       const arr=getAllSubmissions();
@@ -208,25 +279,24 @@
       const pin=document.getElementById('pinInput').value.trim();
       const arr=getAllSubmissions().map(enc=>decodeRecord(enc,pin)).filter(Boolean);
       const blob=new Blob([JSON.stringify(arr,null,2)],{type:'application/json'});
-      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`resultados_matematicas_${new Date().toISOString().slice(0,10)}.json`; a.click(); URL.revokeObjectURL(a.href);
+      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`resultados_integridad_${new Date().toISOString().slice(0,10)}.json`; a.click(); URL.revokeObjectURL(a.href);
     });
 
-    // ---------- Exportar Excel ----------
     document.getElementById('exportExcel').addEventListener('click',()=>{
       const pin=document.getElementById('pinInput').value.trim();
       const raw=getAllSubmissions().map(enc=>decodeRecord(enc,pin)).filter(Boolean);
       if(!raw.length){ alert('No hay registros para exportar.'); return; }
       const rows = raw.map((r,idx)=>{
-        const evals = r.answers.map((a,i)=> (a!==null && r.questions[i].opts[a].ok) ? 'OK':'ERR');
-        const score = evals.filter(x=>x==='OK').length;
-        const base={ "#": idx+1, "Nombre": r.name, "UDN": r.udn, "Fecha/Hora": new Date(r.timestamp).toLocaleString(), "Puntaje": score };
+        const evals = r.answers.map((a,i)=> (a!==null && r.questions[i].opts[a].ok) ? 'ETICO':'RIESGO');
+        const score = evals.filter(x=>x==='ETICO').length;
+        const base={ "#": idx+1, "Nombre": r.name, "UDN": r.udn, "Fecha/Hora": new Date(r.timestamp).toLocaleString(), "Puntaje Ético": score };
         evals.forEach((v,i)=> base[`P${i+1}`]=v );
         return base;
       });
       const ws = XLSX.utils.json_to_sheet(rows);
       const wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, "Resultados");
-      XLSX.writeFile(wb, "resultados_test_matematicas.xlsx");
+      XLSX.writeFile(wb, "resultados_test_integridad.xlsx");
     });
 
     document.getElementById('clearAll').addEventListener('click',()=>{
@@ -268,48 +338,46 @@
     function showAnalysis(index,pin){
       const rec=decodeRecord(getAllSubmissions()[index],pin); if(!rec) return;
       const total=rec.questions.length;
-      let correct=0;
-      const areaCounts={operaciones:0, porcentajes:0, proporciones:0, sucesiones:0, cíclicos:0, inventario:0, corteZ:0, estimaciones:0};
-      const areaErrors={operaciones:0, porcentajes:0, proporciones:0, sucesiones:0, cíclicos:0, inventario:0, corteZ:0, estimaciones:0};
+      let etico=0;
+      const areaCounts={caja:0, proveedor:0, 'cíclicos':0, tickets:0, inventario:0, promociones:0, datos:0, mermas:0, conflicto:0, seguridad:0, depósitos:0, evidencias:0, informes:0, sanciones:0, auditoría:0, corteZ:0, proveedor2:0, privacidad:0, transparencia:0, denuncia:0};
+      const areaRiesgo={caja:0, proveedor:0, 'cíclicos':0, tickets:0, inventario:0, promociones:0, datos:0, mermas:0, conflicto:0, seguridad:0, depósitos:0, evidencias:0, informes:0, sanciones:0, auditoría:0, corteZ:0, proveedor2:0, privacidad:0, transparencia:0, denuncia:0};
 
       rec.answers.forEach((a,i)=>{
         const q=rec.questions[i];
         const ok = (a!==null && q.opts[a].ok);
-        if(ok) correct++;
-        const key = (q.topic in areaCounts)? q.topic : 'operaciones';
-        areaCounts[key]++;
-        if(!ok) areaErrors[key]++;
+        if(ok) etico++;
+        const topic = q.topic in areaCounts ? q.topic : 'informes';
+        areaCounts[topic]++;
+        if(!ok) areaRiesgo[topic]++;
       });
-      const incorrect = total - correct;
+      const riesgo = total - etico;
 
       const bueno=[]; const malo=[]; const recomendado=[];
-      // Fortalezas y áreas débiles
+      if(etico/total>=0.9){bueno.push('Sólidos criterios éticos y apego a protocolo.');}
+      else if(etico/total>=0.75){bueno.push('Buen criterio con áreas puntuales a reforzar.');}
+      else {malo.push('Criterio ético insuficiente para rol de supervisión.'); recomendado.push('Repasar Código de Ética y protocolos de evidencias/denuncia.');}
+
       Object.keys(areaCounts).forEach(k=>{
         if(areaCounts[k]===0) return;
-        const err = areaErrors[k];
-        if(err===0) bueno.push(`Domina ${k}.`);
-        if(err>0 && err/areaCounts[k]>=0.5){
-          if(k==='corteZ') { malo.push('Errores en arqueo y flujo de efectivo.'); recomendado.push('Repasar fórmula de efectivo final y retiros/deps.'); }
-          if(k==='cíclicos'){ malo.push('Errores en ajustes de cíclicos.'); recomendado.push('Practicar diferencias sistema vs físico con evidencia.'); }
-          if(k==='porcentajes'){ malo.push('Dificultad con porcentajes.'); recomendado.push('Ejercicios de descuentos y mermas.'); }
-          if(k==='proporciones'){ malo.push('Fallas en proporciones.'); recomendado.push('Reglas de tres y escalados.'); }
-          if(k==='inventario'){ malo.push('Errores en movimientos de inventario.'); recomendado.push('Secuencia entradas/salidas y existencia final.'); }
-          if(k==='estimaciones'){ malo.push('Estimaciones poco precisas.'); recomendado.push('Redondeo y cálculo mental.'); }
-          if(k==='sucesiones'){ malo.push('Patrones numéricos débiles.'); recomendado.push('Series aritméticas y reconocimiento de patrones.'); }
-          if(k==='operaciones'){ malo.push('Errores en operaciones básicas.'); recomendado.push('Multiplicaciones y sumas aplicadas a ventas.'); }
+        const r=areaRiesgo[k];
+        if(r/areaCounts[k]>=0.5){
+          if(k==='caja'||k==='corteZ'||k==='depósitos'){ malo.push('Riesgo en control de efectivo.'); recomendado.push('Reforzar corte Z, retiros/depósitos y comprobación.'); }
+          if(k==='proveedor'||k==='proveedor2'){ malo.push('Conflictos de interés y recepciones sin respaldo.'); recomendado.push('Capacitación en integridad con terceros.'); }
+          if(k==='cíclicos'||k==='inventario'||k==='mermas'){ malo.push('Ajustes sin evidencia.'); recomendado.push('Exigir fotos, documentos y notas de recepción.'); }
+          if(k==='tickets'){ malo.push('Tolerancia a fraude en tickets.'); recomendado.push('Proceso disciplinario y trazabilidad.'); }
+          if(k==='datos'||k==='privacidad'){ malo.push('Uso indebido de datos/sistemas.'); recomendado.push('Autorizaciones formales y mínimo privilegio.'); }
+          if(k==='seguridad'){ malo.push('Riesgo en manejo de seguridad.'); recomendado.push('Protocolos de emergencia y pausas operativas.'); }
+          if(k==='informes'||k==='transparencia'){ malo.push('Manipulación de reportes.'); recomendado.push('Reporte factual con evidencia obligatoria.'); }
+          if(k==='sanciones'||k==='denuncia'||k==='auditoría'||k==='evidencias'){ malo.push('Débil apego a procesos formales.'); recomendado.push('Checklist de auditoría/denuncia y cadena de custodia.'); }
         }
       });
-
-      if(correct/total>=0.85){ bueno.push('Excelente criterio numérico aplicado a UDN.'); }
-      else if(correct/total>=0.65){ bueno.push('Base sólida; pulir áreas específicas.'); }
-      else { malo.push('Rendimiento bajo general.'); recomendado.push('Plan de refuerzo de 4 semanas por tema.'); }
 
       const area=document.getElementById('analysisArea'); area.innerHTML='';
       const summary=document.createElement('div');
       summary.className='analysis-summary';
       summary.innerHTML = `<h3>Resumen</h3>
-        <p class='pill'>Aciertos: ${correct}/${total}</p>
-        <p class='pill'>Errores: ${incorrect}/${total}</p>
+        <p class='pill'>Ético: ${etico}/${total}</p>
+        <p class='pill'>Riesgoso: ${riesgo}/${total}</p>
         <p><strong>Lo bueno:</strong> ${bueno.join(' ')||'—'}</p>
         <p><strong>Lo malo:</strong> ${malo.join(' ')||'—'}</p>
         <p><strong>Recomendado:</strong> ${recomendado.join(' • ')||'—'}</p>`;
@@ -318,7 +386,7 @@
       const canvas=document.createElement('canvas'); area.appendChild(canvas);
       new Chart(canvas,{
         type:'bar',
-        data:{labels:['Aciertos','Errores'],datasets:[{label:'Resultados',data:[correct,incorrect]}]},
+        data:{labels:['Ético','Riesgoso'],datasets:[{label:'Integridad',data:[etico,riesgo]}]},
         options:{responsive:true,scales:{y:{beginAtZero:true}}}
       });
     }
